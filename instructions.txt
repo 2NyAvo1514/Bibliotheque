@@ -1,0 +1,98 @@
+Gestion Bibliotheque
+____________________
+
+
+Livre 
+    - titre
+    - ISBN
+    - edition
+    - tag
+    - auteur
+    - ...
+
+Pret
+    - a domicile
+    - lecture sur place
+    > nombre de livres max / profil
+    > duree de pret 
+
+Exemplaire
+
+Adherent _____ etudiant
+        |_____ pro
+        |_____ prof
+        |_____ anonyme
+
+    limite nombre livres & duree lecture /a domicile et /sur place
+
+penalite : si livre non rendu , duree de penalite
+
+inscription : payer pour etre membre , duree d'inscription
+    exemplaire dispo? 
+
+Resevation : adherent -- reserve --> 1 exemplaire : de **date** a **date**
+    - validation reservation par Bibliothecaire
+    - transformer reservation en pret
+    - nombre de reservation parametrable par profil adherent
+
+Prolongement pret : 
+    - qui ?
+    - combien de temps ?
+    - combien de livres ?
+    - nombre de prolongement en parallele
+    - ** prolongement prolongeable?
+
+Gestion jours feries & weekend
+    - rendre plus tot / plus tard ?
+
+Recherches avancees
+
+Dashboard 
+
+----- Entites -----
+
+    . Livre
+    . Adherent (membre)
+    . Exemplaire
+    . 
+
+===================================================================
+
+*** Pour les fonctionnalites complexes ***
+
+    -> Ecrire en details d'abord - (methodologie UML)
+
+Exemple : 
+    - Titre : Preter un (exemplaire) livre
+    - Utilisateur : bibliothecaire
+    - Entree (input) : num adherent , num exemplaire
+    - Scenario normal/nominal :
+        exemplaire preté par l'etudiant
+    - Scenario alternatif ( scenario où les regles de gestion ne sont pas satisfaites ) :
+        message d'erreur
+    - Regles de gestion :
+        . adherent existe 
+        . ---||--- "actif"/abonné
+        . num exemplaire existe
+        . exemplaire dispo
+        . adherent non sanctionné
+        . quota(limite nb livres) non atteint
+        . livre peut etre preté a l'adherent
+    - Test ( pour test unitaire ) :
+        . adherent inactif -> erreur
+        . (prendre scenario alternatif)
+        . ...
+        . (vers la fin) exemplaire devient indisponible
+        . quota adherent -> -1
+
+===================================================================
+
+----- Liste fonctionnalites par entité -----
+
+. Reserver un (exemplaire) livre
+    - titre : Reserver un livre
+    - Utilisateur : bibliothecaire
+    - Entree (input) : num adherent , num exemplaire , date debut
+    - Scenario normal/nominal:
+        un adherent reserve un livre à une date
+    - 
