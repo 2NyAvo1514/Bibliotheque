@@ -14,13 +14,13 @@
 <body>
 
     <header>
-        <h1>Bibliothèque Communale</h1>
+        <h1>Grande Bibliothèque </h1>
         <p>Explorez. Découvrez. Apprenez.</p>
     </header>
 
     <nav>
-        <a href="${pageContext.request.contextPath}/">🏠 Accueil</a>
-        <a href="${pageContext.request.contextPath}/livres">📇 Catalogue</a>
+        <a href="#">🏠 Accueil</a>
+        <a href="livres">📕 Livres</a>
         <a href="#">🔌 Connexion</a>
         <a href="#">☎️ Contact</a>
     </nav>
@@ -38,21 +38,7 @@
                     <li class="list-group-item"><strong>ISBN :</strong> ${livre.isbn}</li>
                 </ul>
 
-                <h4>Tags associés</h4>
-                <c:choose>
-                    <c:when test="${empty livre.tags}">
-                        <p class="text-muted fst-italic">Aucun tag associé pour l’instant.</p>
-                    </c:when>
-                    <c:otherwise>
-                        <ul class="list-inline">
-                            <c:forEach items="${livre.tags}" var="tag">
-                                <li class="list-inline-item badge bg-info text-dark mb-1">
-                                    ${tag.nomTag}
-                                </li>
-                            </c:forEach>
-                        </ul>
-                    </c:otherwise>
-                </c:choose>
+                
 
                 <!-- Formulaire d’ajout de tag -->
                 <form class="row g-2 mt-3"

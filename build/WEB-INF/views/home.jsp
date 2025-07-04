@@ -1,15 +1,10 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Bibliothèque Communale</title>
-    <link
-      rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/style.css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 

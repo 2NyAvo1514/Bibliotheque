@@ -1,9 +1,10 @@
 package repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import entities.Livre;
+import org.springframework.data.jpa.repository.*;
+// import org.springframework.stereotype.Repository;
 
-public interface LivreRepository extends JpaRepository<Livre, Integer>{
+// @Repository
+public interface LivreRepository extends JpaRepository<Livre, Integer> {
 
 }
