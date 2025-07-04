@@ -1,19 +1,20 @@
 package service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
-
 import entities.Tag;
 import repository.TagRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Service
 @Transactional(readOnly = true)
 public class TagService {
 
-    private final TagRepository tagRepository;
+    private final TagRepository tagRepository ;
 
     @Autowired
     public TagService(TagRepository tagRepository) {
@@ -34,6 +35,11 @@ public class TagService {
     public Tag getTagById(int id) {
         return tagRepository.findById(id).orElse(null);
     }
+
+    // public Set<Tag> getTagsByLivreId(int idLivre) {
+    //     List<Tag> tags = tagRepository.findTagsByLivreId(idLivre);
+    //     return new HashSet<>(tags);  // Conversion en Set
+    // }
 
     @Transactional
     public void deleteTagById(int id) {

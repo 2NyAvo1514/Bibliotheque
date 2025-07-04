@@ -15,13 +15,13 @@
 
     <%-- ==== ENTÊTE & NAV (copié depuis l’accueil) ==== --%>
     <header>
-        <h1>Bibliothèque Communale</h1>
+        <h1>Bibliothèque </h1>
         <p>Explorez. Découvrez. Apprenez.</p>
     </header>
 
     <nav>
-        <a href="${pageContext.request.contextPath}/">🏠 Accueil</a>
-        <a href="${pageContext.request.contextPath}/livres">📇 Catalogue</a>
+        <a href="#">🏠 Accueil</a>
+        <a href="livres">📕 Livres</a>
         <a href="#">🔌 Connexion</a>
         <a href="#">☎️ Contact</a>
     </nav>

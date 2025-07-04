@@ -120,14 +120,3 @@ INSERT INTO TagLivre (idLivre, idTag) VALUES
 (4, 3), -- Harry Potter - Jeunesse
 (4, 5), -- Harry Potter - Fantastique
 (5, 5); -- Seigneur des Anneaux - Fantastique
-
-INSERT INTO TagLivre (idLivre, idTag) VALUES 
-(1, 1),
-(1, 3),
-(2, 1), 
-(2, 2), 
-(3, 1), 
-(3, 4), 
-(4, 3), 
-(4, 5), 
-(5, 5); 
