@@ -190,7 +190,7 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Set;
+// import java.util.Set;
 
 @Controller
 public class LivreController {
@@ -211,6 +211,9 @@ public class LivreController {
     @GetMapping("/livres")
     public String showAllLivres(Model model) {
         List<Livre> livres = livreService.getAllLivres();
+        // for (Livre livre : livres) {
+        //     livre.setTags(tagService.getTagsByLivreId(livre.getIdLivre()));
+        // }
         model.addAttribute("livres", livres);
         return "list";
     }

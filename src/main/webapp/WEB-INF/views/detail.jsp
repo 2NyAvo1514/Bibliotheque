@@ -38,21 +38,6 @@
                     <li class="list-group-item"><strong>ISBN :</strong> ${livre.isbn}</li>
                 </ul>
 
-                
-
-                <!-- Formulaire d’ajout de tag -->
-                <form class="row g-2 mt-3"
-                      action="${pageContext.request.contextPath}/livres/${livre.idLivre}/add-tag"
-                      method="post">
-                    <div class="col-auto">
-                        <input type="number" min="1" name="tagId"
-                               class="form-control" placeholder="ID du tag" required>
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary">Ajouter le tag</button>
-                    </div>
-                </form>
-
                 <a href="${pageContext.request.contextPath}/livres"
                    class="btn btn-link mt-3">← Retour au catalogue</a>
             </div>
@@ -61,7 +46,7 @@
     </div>
 
     <footer>
-        &copy; 2025 Bibliothèque Communale ‑ Tous droits réservés
+        &copy; 2025 Bibliothèque - Tous droits réservés
     </footer>
 
 </body>

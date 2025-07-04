@@ -1,15 +1,16 @@
 package repository;
 
 import entities.Tag;
+
+import java.util.List;
+
 import org.springframework.data.jpa.repository.*;
 // import org.springframework.data.repository.query.Param;
 // import org.springframework.stereotype.Repository;
 
-// import java.util.List;
-
 // @Repository
 public interface TagRepository extends JpaRepository<Tag, Integer> {
 
-    // @Query("SELECT t FROM Tag t JOIN t.livres l WHERE l.idLivre = :idLivre")
+    // @Query("SELECT * FROM taglivre tl join tag t on t.idTag = tl.idTag join livre l on l.idLivre = tl.idLivre WHERE l.idLivre = :idLivre")
     // List<Tag> findTagsByLivreId(@Param("idLivre") int idLivre);
 }

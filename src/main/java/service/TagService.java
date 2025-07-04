@@ -14,7 +14,7 @@ import java.util.Set;
 @Transactional(readOnly = true)
 public class TagService {
 
-    private final TagRepository tagRepository;
+    private final TagRepository tagRepository ;
 
     @Autowired
     public TagService(TagRepository tagRepository) {
